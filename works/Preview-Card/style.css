@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 306px;
+    height: 455px;
+    background: #000;
+    overflow: hidden;
+}
+.card .poster{
+    position: relative;
+    overflow: hidden;
+}
+.card .poster::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(0deg, #000 50%, transparent) ;
+    transition: 0.3s;
+    z-index: 1;
+}
+.card .poster img{
+    width: 305px;
+    transition: 0.3s;
+}
+.card:hover .poster img{
+    filter: blur(5px);
+    transform: translateY(-50px);
+    margin-bottom: 150px;
+}
+.details{
+    position: absolute;
+    bottom: -310px;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s all ease-in-out;
+    z-index: 2;
+}
+.card:hover .details{
+    bottom: -140px;
+}
+.details h2{
+    color: #fff;
+    font-size: 20px;
+}
+
+.details h2 span{
+    font-size: 14px;
+    color: #ff9800;
+}
+.rating{
+    position: relative;
+    padding: 5px 0;
+}
+.rating .fa{
+    color: #f7f406;
+    margin-right: 2px;
+    font-size: 16px;
+}
+.rating span{
+    color: #fff;
+    padding: 0 5px;
+}
+.tags{
+    position: relative;
+    margin-top: 5px;
+}
+.tags span{
+    padding: 2px 5px;
+    margin-right: 2px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 6px;
+}
+.tags span.fantasy{
+    background: #7206f7;
+}
+.tags span.romance{
+    background: #f70661;
+}
+.info{
+    color: #fff; 
+}
+.info p{
+    margin: 15px 0 10px;    
+}
+.star{
+    position: relative;
+}
+.star h4{
+    font-size: 20px;
+    color: #f7f406;
+}
+.star > div{
+    margin: 10px 0 0;
+    display: flex;
+}
+.star > div > div{
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 6px;
+    border: 1.5px #fff solid;
+}
+.star > div > div img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

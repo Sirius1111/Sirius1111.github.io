@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img_1 {
+    position: relative;
+    max-width: 100%;
+    transition-property: opacity, z-index;
+    transition-duration: 2s;
+    opacity: 1;
+    z-index: 1;
+}
+
+.img_2, .img_3, .img_4, .img_5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition-property: opacity, z-index;
+    transition-duration: 2s;
+    opacity: 0;
+}
+
+.city > div:nth-of-type(1) {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.city > div:nth-of-type(1) > img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.img_1 {
+    animation: imgAnim 30s linear infinite;
+}
+
+.img_2 {
+    animation: imgAnim 30s linear 6s infinite;
+}
+
+.img_3 {
+    animation: imgAnim 30s linear 12s infinite;
+}
+
+.img_4 {
+    animation: imgAnim 30s linear 18s infinite;
+}
+
+.img_5 {
+    animation: imgAnim 30s linear 24s infinite;
+}
+
+@keyframes imgAnim {
+    0% {opacity: 0; z-index: 5;}
+    8% {opacity: 1; z-index: 5;}
+    17% {opacity: 1; z-index: 5;}
+    25% {opacity: 0; z-index: 5;}
+    100% {opacity: 0; z-index: 5;}
+}
+
+.content_1, .content_2, .content_3, .content_4, .content_5 {
+    position: absolute;
+    width: 35%;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 15px;
+    padding: 10px;
+}
+
+.city h3 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 3px;
+    font-family: sans-serif;
+}
+
+.city p {
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.slider:hover .city {
+    animation-play-state: paused;
+}
+
+.but_1, .but_2, .but_3, .but_4, .but_5 {
+    position: absolute;
+    top: 525px;
+    right: 10px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: transparent;
+    /* text-align: center; */
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: -1px -1px 1px 1px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.but_1 {
+    margin-left: -50px;
+}
+
+.but_2 {
+    margin-left: -25px;
+}
+
+.but_3 {
+    
+}
+
+.but_4 {
+    margin-left: 25px;
+}
+
+.but_5 {
+    margin-left: 50px;
+}
+
+.rou_1, .rou_2, .rou_3, .rou_4, .rou_5 {
+    position: absolute;
+    top: 525px;
+    right: 10px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* text-align: center; */
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: -1px -1px 1px 1px rgba(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255);
+    outline: none;
+}
+
+.rou_1 {
+    margin-left: -50px;
+    animation: butAnim 30s linear infinite;
+}
+
+.rou_2 {
+    margin-left: -25px;
+    animation: butAnim 30s linear 6s infinite;
+}
+
+.rou_3 {
+    animation: butAnim 30s linear 12s infinite;
+}
+
+.rou_4 {
+    margin-left: 25px;
+    animation: butAnim 30s linear 18s infinite;
+}
+
+.rou_5 {
+    margin-left: 50px;
+    animation: butAnim 30s linear 24s infinite;
+}
+
+@keyframes butAnim {
+    0% {background-color: rgb(255, 255, 255);}
+    8% {background-color: rgb(150, 150, 150);}
+    17% {background-color: rgb(150, 150, 150);}
+    25% {background-color: rgb(255, 255, 255);}
+    100% {background-color: rgb(255, 255, 255);}
+}
+
+.slider:hover .nav {
+    animation-play-state: paused;
+}
+
+.but_1:focus ~ .city, .but_2:focus ~ .city, .but_3:focus ~ .city, .but_4:focus ~ .city, .but_5:focus ~ .city {
+    animation: none;
+}
+
+.but_1:focus ~ .nav, .but_2:focus ~ .nav, .but_3:focus ~ .nav, .but_4:focus ~ .nav, .but_5:focus ~ .nav {
+    animation: none;
+}
+
+.but_1:focus ~ .img_1, .but_2:focus ~ .img_2, .but_3:focus ~ .img_3, .but_4:focus ~ .img_4, .but_5:focus ~ .img_5 {
+    opacity: 1;
+    z-index: 15;
+}
+
+.but_1:focus, .but_2:focus, .but_3:focus, .but_4:focus, .but_5:focus {
+    background-color:  rgb(150, 150, 150);
+}

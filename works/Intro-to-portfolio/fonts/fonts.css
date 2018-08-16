@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'ProunBC';
+    src: url('ProunBC.eot');
+    src: url('ProunBC.eot?#iefix') format('embedded-opentype'),
+        url('ProunBC.woff2') format('woff2'),
+        url('ProunBC.woff') format('woff'),
+        url('ProunBC.ttf') format('truetype'),
+        url('ProunBC.svg#ProunBC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slayder-3.1</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="img_box">
+                    <img src="img/img1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img_box">
+                    <img src="img/img2.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img_box swiper-zoom-container">
+                    <img src="img/img3.jpg" alt="">
+                </div>
+            </div> 
+            <div class="swiper-slide">
+                <div class="img_box swiper-zoom-container">
+                    <img src="img/img4.jpg" alt=""> 
+                </div>
+            </div>   
+            <div class="swiper-slide">
+                <div class="img_box swiper-zoom-container">
+                    <img src="img/img5.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img_box swiper-zoom-container">
+                    <img src="img/img8.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide ">
+                <div class="img_box">
+                    <img src="img/img7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+      <script src="js/swiper.min.js"></script>
+      <script>
+                var swiper = new Swiper('.swiper-container', {
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    autoHeight: true, //enable auto height
+                    spaceBetween: 20,
+                    zoom: true,
+                    coverflowEffect: {
+                        rotate: 20,
+                        stretch: 8,
+                        depth: 200,
+                        modifier: 3,
+                        slideShadows : true,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,    
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                },
+                    });
+          </script>
+
+
+</body>
+</html>
